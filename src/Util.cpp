@@ -532,6 +532,8 @@ sc2::UnitTypeID Util::WhatBuildsUpgrade(const sc2::UpgradeID & type)
         case sc2::UPGRADE_ID::PROTOSSSHIELDSLEVEL1: return sc2::UNIT_TYPEID::TERRAN_SCV;
         case sc2::UPGRADE_ID::PROTOSSSHIELDSLEVEL2: return sc2::UNIT_TYPEID::TERRAN_SCV;
         case sc2::UPGRADE_ID::PROTOSSSHIELDSLEVEL3: return sc2::UNIT_TYPEID::TERRAN_SCV;
+
+        default: return 0;
     }
 }
 
