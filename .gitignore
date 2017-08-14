@@ -14,3 +14,4 @@ vs/*.user
 bin/CommandCenter
 bin/*.exe
 bin/*.ilk
+cmake-build-debug

@@ -7,7 +7,7 @@ struct UnitInfo
     // we need to store all of this data because if the unit is not visible, we
     // can't reference it from the unit pointer
 
-    int             tag;
+    sc2::Tag        tag;
     float           lastHealth;
     float           lastShields;
     int             player;
@@ -27,17 +27,17 @@ struct UnitInfo
 
     }
 
-    const bool operator == (sc2::Unit & unit) const
+    bool operator == (sc2::Unit & unit) const
     {
         return tag == unit.tag;
     }
 
-    const bool operator == (const UnitInfo & rhs) const
+    bool operator == (const UnitInfo & rhs) const
     {
         return (tag == rhs.tag);
     }
 
-    const bool operator < (const UnitInfo & rhs) const
+    bool operator < (const UnitInfo & rhs) const
     {
         return (tag < rhs.tag);
     }
@@ -53,7 +53,7 @@ class UnitData
     int                     m_mineralsLost;
     int	                    m_gasLost;
 
-    const bool badUnitInfo(const UnitInfo & ui) const;
+    bool badUnitInfo(const UnitInfo & ui) const;
 
 public:
 
